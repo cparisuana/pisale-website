@@ -65,14 +65,14 @@ class Particle {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         
-        // Create gradient for particles - Charcoal Slate colors
+        // Create gradient for particles - Deep Ocean colors
         const gradient = ctx.createRadialGradient(
             this.x, this.y, 0,
             this.x, this.y, this.radius
         );
-        gradient.addColorStop(0, `rgba(84, 110, 122, ${this.opacity})`);
-        gradient.addColorStop(0.5, `rgba(120, 144, 156, ${this.opacity * 0.7})`);
-        gradient.addColorStop(1, `rgba(144, 164, 174, 0)`);
+        gradient.addColorStop(0, `rgba(30, 136, 229, ${this.opacity})`);
+        gradient.addColorStop(0.5, `rgba(38, 166, 154, ${this.opacity * 0.7})`);
+        gradient.addColorStop(1, `rgba(66, 165, 245, 0)`);
         
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -106,7 +106,7 @@ function animate() {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
-                ctx.strokeStyle = `rgba(84, 110, 122, ${(1 - distance / 150) * 0.2})`;
+                ctx.strokeStyle = `rgba(30, 136, 229, ${(1 - distance / 150) * 0.25})`;
                 ctx.lineWidth = 1;
                 ctx.stroke();
             }
@@ -272,10 +272,10 @@ canvas.addEventListener('mousemove', (e) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    // Draw glow at mouse position - Charcoal Slate
+    // Draw glow at mouse position - Deep Ocean
     const gradient = ctx.createRadialGradient(x, y, 0, x, y, 100);
-    gradient.addColorStop(0, 'rgba(84, 110, 122, 0.3)');
-    gradient.addColorStop(1, 'rgba(84, 110, 122, 0)');
+    gradient.addColorStop(0, 'rgba(30, 136, 229, 0.4)');
+    gradient.addColorStop(1, 'rgba(30, 136, 229, 0)');
     
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -299,6 +299,6 @@ window.addEventListener('load', () => {
 // CONSOLE MESSAGE
 // ===================================
 
-console.log('%c🌊 PISALE Website', 'color: #546E7A; font-size: 24px; font-weight: bold;');
-console.log('%cPowered by ALE-AMR technology', 'color: #78909C; font-size: 14px;');
-console.log('%cInterested in the code? Visit our GitHub!', 'color: #90A4AE; font-size: 12px;');
+console.log('%c🌊 PISALE Website', 'color: #1E88E5; font-size: 24px; font-weight: bold;');
+console.log('%cPowered by ALE-AMR technology', 'color: #26A69A; font-size: 14px;');
+console.log('%cInterested in the code? Visit our GitHub!', 'color: #42A5F5; font-size: 12px;');
