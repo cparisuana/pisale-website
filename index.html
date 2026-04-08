@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroCode - ALE-AMR Hydrodynamic Simulations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">◬</span>
+                <span class="logo-text">HydroCode</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Advanced Computational Fluid Dynamics</div>
+            <h1 class="hero-title">
+                <span class="gradient-text">ALE-AMR</span> Hydrodynamic Code
+            </h1>
+            <p class="hero-subtitle">
+                High-fidelity 2D/3D simulations with Adaptive Lagrangian-Eulerian methods 
+                and Adaptive Mesh Refinement for complex fluid dynamics problems
+            </p>
+            <div class="hero-buttons">
+                <a href="#examples" class="btn btn-primary">Explore Examples</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">2D/3D</div>
+                    <div class="stat-label">Dimensions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">ALE</div>
+                    <div class="stat-label">Method</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">AMR</div>
+                    <div class="stat-label">Refinement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About the Code</h2>
+                <p class="section-subtitle">A robust framework for complex hydrodynamic simulations</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>High Performance</h3>
+                    <p>Optimized algorithms for efficient computation of large-scale problems with parallel processing capabilities</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Adaptive Methods</h3>
+                    <p>ALE framework seamlessly transitions between Lagrangian and Eulerian descriptions for optimal accuracy</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">📐</div>
+                    <h3>Smart Refinement</h3>
+                    <p>AMR technology dynamically refines mesh where needed, balancing resolution and computational cost</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p class="section-subtitle">Cutting-edge capabilities for modern CFD challenges</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <span class="feature-number">01</span>
+                        <h3>ALE Formulation</h3>
+                    </div>
+                    <p>Arbitrary Lagrangian-Eulerian framework handles extreme deformations while maintaining numerical accuracy</p>
+                    <ul class="feature-list">
+                        <li>Automatic rezoning</li>
+                        <li>Contact algorithms</li>
+                        <li>Material interface tracking</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <span class="feature-number">02</span>
+                        <h3>Adaptive Mesh Refinement</h3>
+                    </div>
+                    <p>Dynamic grid adaptation concentrates resolution in critical regions automatically</p>
+                    <ul class="feature-list">
+                        <li>Error-driven refinement</li>
+                        <li>Multi-level hierarchy</li>
+                        <li>Load balancing</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <span class="feature-number">03</span>
+                        <h3>2D & 3D Capabilities</h3>
+                    </div>
+                    <p>Full support for both 2D and 3D simulations with consistent numerical schemes</p>
+                    <ul class="feature-list">
+                        <li>Planar and axisymmetric 2D</li>
+                        <li>Full 3D geometries</li>
+                        <li>Coupled multi-physics</li>
+                    </ul>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <span class="feature-number">04</span>
+                        <h3>Advanced Physics</h3>
+                    </div>
+                    <p>Comprehensive physical models for realistic simulations</p>
+                    <ul class="feature-list">
+                        <li>Equation of state library</li>
+                        <li>Strength models</li>
+                        <li>Fracture mechanics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simulation Examples</h2>
+                <p class="section-subtitle">Showcase of solved problems and validation cases</p>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="example-filters">
+                <button class="filter-btn active" data-filter="all">All Examples</button>
+                <button class="filter-btn" data-filter="2d">2D Simulations</button>
+                <button class="filter-btn" data-filter="3d">3D Simulations</button>
+                <button class="filter-btn" data-filter="validation">Validation</button>
+            </div>
+
+            <!-- Examples Grid -->
+            <div class="examples-grid">
+                <!-- Example 1 -->
+                <div class="example-card" data-category="2d validation">
+                    <div class="example-image">
+                        <img src="placeholder-shock.jpg" alt="Shock tube problem">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">2D</span>
+                            <span class="tag">Validation</span>
+                        </div>
+                        <h3>Sod Shock Tube</h3>
+                        <p>Classic 1D Riemann problem demonstrating shock capturing capabilities</p>
+                        <div class="example-meta">
+                            <span>⏱️ 0.2 ms</span>
+                            <span>📊 AMR: 4 levels</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2 -->
+                <div class="example-card" data-category="2d">
+                    <div class="example-image">
+                        <img src="placeholder-blast.jpg" alt="Blast wave">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">2D</span>
+                            <span class="tag">Multi-material</span>
+                        </div>
+                        <h3>Underwater Explosion</h3>
+                        <p>Blast wave propagation in water with fluid-structure interaction</p>
+                        <div class="example-meta">
+                            <span>⏱️ 5 ms</span>
+                            <span>📊 AMR: 5 levels</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 3 -->
+                <div class="example-card" data-category="3d">
+                    <div class="example-image">
+                        <img src="placeholder-impact.jpg" alt="Impact simulation">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">3D</span>
+                            <span class="tag">Impact</span>
+                        </div>
+                        <h3>High-Velocity Impact</h3>
+                        <p>Projectile penetration with material failure and fragmentation</p>
+                        <div class="example-meta">
+                            <span>⏱️ 100 μs</span>
+                            <span>📊 10M cells</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4 -->
+                <div class="example-card" data-category="3d validation">
+                    <div class="example-image">
+                        <img src="placeholder-taylor.jpg" alt="Taylor bar">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">3D</span>
+                            <span class="tag">Validation</span>
+                        </div>
+                        <h3>Taylor Bar Impact</h3>
+                        <p>Standard validation case for strength models and material behavior</p>
+                        <div class="example-meta">
+                            <span>⏱️ 80 μs</span>
+                            <span>📊 AMR: 3 levels</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 5 -->
+                <div class="example-card" data-category="2d">
+                    <div class="example-image">
+                        <img src="placeholder-cavity.jpg" alt="Cavity collapse">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">2D</span>
+                            <span class="tag">Cavitation</span>
+                        </div>
+                        <h3>Bubble Collapse</h3>
+                        <p>Cavitation bubble dynamics near rigid boundary</p>
+                        <div class="example-meta">
+                            <span>⏱️ 1 ms</span>
+                            <span>📊 AMR: 6 levels</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 6 -->
+                <div class="example-card" data-category="3d">
+                    <div class="example-image">
+                        <img src="placeholder-jet.jpg" alt="Shaped charge">
+                        <div class="example-overlay">
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-tags">
+                            <span class="tag">3D</span>
+                            <span class="tag">Complex</span>
+                        </div>
+                        <h3>Shaped Charge Jet</h3>
+                        <p>Metal jet formation and penetration mechanics</p>
+                        <div class="example-meta">
+                            <span>⏱️ 50 μs</span>
+                            <span>📊 15M cells</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Publications & References</h2>
+                <p class="section-subtitle">Scientific foundations and validation studies</p>
+            </div>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="pub-type">Journal Article</div>
+                    <h3>ALE-AMR Framework for Hydrodynamic Simulations</h3>
+                    <p class="pub-authors">Author et al.</p>
+                    <p class="pub-journal">Journal of Computational Physics, 2024</p>
+                    <a href="#" class="pub-link">Read Paper →</a>
+                </div>
+                <div class="publication-card">
+                    <div class="pub-type">Conference</div>
+                    <h3>Adaptive Refinement Strategies for Impact Problems</h3>
+                    <p class="pub-authors">Author & Collaborator</p>
+                    <p class="pub-journal">ECCOMAS Conference, 2023</p>
+                    <a href="#" class="pub-link">View Presentation →</a>
+                </div>
+                <div class="publication-card">
+                    <div class="pub-type">Technical Report</div>
+                    <h3>Validation Suite for Multi-Material Flows</h3>
+                    <p class="pub-authors">Research Group</p>
+                    <p class="pub-journal">Technical Report TR-2024-01</p>
+                    <a href="#" class="pub-link">Download PDF →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p class="section-subtitle">Interested in collaborations or have questions?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>your.email@institution.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏛️</div>
+                        <div>
+                            <h4>Institution</h4>
+                            <p>Your University / Research Center</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <div>
+                            <h4>Code Repository</h4>
+                            <p><a href="#">GitHub Link</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">◬</span>
+                        <span class="logo-text">HydroCode</span>
+                    </div>
+                    <p>Advanced ALE-AMR hydrodynamic simulations for complex fluid dynamics problems</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">User Manual</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HydroCode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
