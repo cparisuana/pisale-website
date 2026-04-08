@@ -1,421 +1,204 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PISALE - ALE-AMR Hydrodynamic Simulations</title>
+    <title>PISALE - ALE-AMR Examples</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">〰</span>
-                <span class="logo-text">PISALE</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#examples">Examples</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-        <div class="hero-content">
-            <div class="hero-badge">Advanced Computational Fluid Dynamics</div>
-            <h1 class="hero-title">
-                <span class="gradient-text">ALE-AMR</span> Hydrodynamic Code
-            </h1>
-            <p class="hero-subtitle">
-                High-fidelity 2D/3D simulations with Adaptive Lagrangian-Eulerian methods 
-                and Adaptive Mesh Refinement for complex fluid dynamics problems
-            </p>
-            <div class="hero-buttons">
-                <a href="#examples" class="btn btn-primary">Explore Examples</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">2D/3D</div>
-                    <div class="stat-label">Dimensions</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">ALE</div>
-                    <div class="stat-label">Method</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">AMR</div>
-                    <div class="stat-label">Refinement</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <div class="section-header">
-                <h2>About the Code</h2>
-                <p class="section-subtitle">A robust framework for complex hydrodynamic simulations</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>High Performance</h3>
-                    <p>Optimized algorithms for efficient computation of large-scale problems with parallel processing capabilities</p>
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">〰</span>
+                    <h1>PISALE Examples</h1>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Adaptive Methods</h3>
-                    <p>ALE framework seamlessly transitions between Lagrangian and Eulerian descriptions for optimal accuracy</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">📐</div>
-                    <h3>Smart Refinement</h3>
-                    <p>AMR technology dynamically refines mesh where needed, balancing resolution and computational cost</p>
-                </div>
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#examples">Examples</a>
+                    <a href="#documentation">Documentation</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Main Content -->
+    <main class="main">
         <div class="container">
-            <div class="section-header">
-                <h2>Key Features</h2>
-                <p class="section-subtitle">Cutting-edge capabilities for modern CFD challenges</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-header">
-                        <span class="feature-number">01</span>
-                        <h3>ALE Formulation</h3>
-                    </div>
-                    <p>Arbitrary Lagrangian-Eulerian framework handles extreme deformations while maintaining numerical accuracy</p>
-                    <ul class="feature-list">
-                        <li>Automatic rezoning</li>
-                        <li>Contact algorithms</li>
-                        <li>Material interface tracking</li>
-                    </ul>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-header">
-                        <span class="feature-number">02</span>
-                        <h3>Adaptive Mesh Refinement</h3>
-                    </div>
-                    <p>Dynamic grid adaptation concentrates resolution in critical regions automatically</p>
-                    <ul class="feature-list">
-                        <li>Error-driven refinement</li>
-                        <li>Multi-level hierarchy</li>
-                        <li>Load balancing</li>
-                    </ul>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-header">
-                        <span class="feature-number">03</span>
-                        <h3>2D & 3D Capabilities</h3>
-                    </div>
-                    <p>Full support for both 2D and 3D simulations with consistent numerical schemes</p>
-                    <ul class="feature-list">
-                        <li>Planar and axisymmetric 2D</li>
-                        <li>Full 3D geometries</li>
-                        <li>Coupled multi-physics</li>
-                    </ul>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-header">
-                        <span class="feature-number">04</span>
-                        <h3>Advanced Physics</h3>
-                    </div>
-                    <p>Comprehensive physical models for realistic simulations</p>
-                    <ul class="feature-list">
-                        <li>Equation of state library</li>
-                        <li>Strength models</li>
-                        <li>Fracture mechanics</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Examples Section -->
-    <section id="examples" class="examples">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simulation Examples</h2>
-                <p class="section-subtitle">Showcase of solved problems and validation cases</p>
-            </div>
-            
-            <!-- Filter Tabs -->
-            <div class="example-filters">
-                <button class="filter-btn active" data-filter="all">All Examples</button>
-                <button class="filter-btn" data-filter="2d">2D Simulations</button>
-                <button class="filter-btn" data-filter="3d">3D Simulations</button>
-                <button class="filter-btn" data-filter="validation">Validation</button>
-            </div>
+            <!-- Introduction -->
+            <section class="intro">
+                <h1>Welcome to PISALE Examples</h1>
+                <p class="intro-text">
+                    This site presents ALE-AMR hydrodynamic simulation examples. The input files and documentation are available for download. All examples include detailed descriptions of the problem setup, numerical methods, and validation results.
+                </p>
+                <p class="intro-subtext">
+                    PISALE is a high-fidelity 2D/3D ALE-AMR code for complex fluid dynamics problems with adaptive mesh refinement capabilities.
+                </p>
+            </section>
 
             <!-- Examples Grid -->
-            <div class="examples-grid">
-                <!-- Example 1 -->
-                <div class="example-card" data-category="2d validation">
-                    <div class="example-image">
-                        <img src="placeholder-shock.jpg" alt="Shock tube problem">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+            <section id="examples" class="examples-grid">
+                <!-- Example Card 1 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-2d.jpg" alt="2D Examples">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">2D</span>
-                            <span class="tag">Validation</span>
-                        </div>
-                        <h3>Sod Shock Tube</h3>
-                        <p>Classic 1D Riemann problem demonstrating shock capturing capabilities</p>
-                        <div class="example-meta">
-                            <span>⏱️ 0.2 ms</span>
-                            <span>📊 AMR: 4 levels</span>
-                        </div>
-                    </div>
+                    <h3>2D Examples</h3>
+                    <p>Two-dimensional simulation examples including shock tubes, blast waves, and validation cases.</p>
+                    <a href="#2d" class="card-link">View Examples →</a>
                 </div>
 
-                <!-- Example 2 -->
-                <div class="example-card" data-category="2d">
-                    <div class="example-image">
-                        <img src="placeholder-blast.jpg" alt="Blast wave">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+                <!-- Example Card 2 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-3d.jpg" alt="3D Examples">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">2D</span>
-                            <span class="tag">Multi-material</span>
-                        </div>
-                        <h3>Underwater Explosion</h3>
-                        <p>Blast wave propagation in water with fluid-structure interaction</p>
-                        <div class="example-meta">
-                            <span>⏱️ 5 ms</span>
-                            <span>📊 AMR: 5 levels</span>
-                        </div>
-                    </div>
+                    <h3>3D Examples</h3>
+                    <p>Three-dimensional simulations featuring impact problems, penetration mechanics, and complex geometries.</p>
+                    <a href="#3d" class="card-link">View Examples →</a>
                 </div>
 
-                <!-- Example 3 -->
-                <div class="example-card" data-category="3d">
-                    <div class="example-image">
-                        <img src="placeholder-impact.jpg" alt="Impact simulation">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+                <!-- Example Card 3 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-validation.jpg" alt="Validation">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">3D</span>
-                            <span class="tag">Impact</span>
-                        </div>
-                        <h3>High-Velocity Impact</h3>
-                        <p>Projectile penetration with material failure and fragmentation</p>
-                        <div class="example-meta">
-                            <span>⏱️ 100 μs</span>
-                            <span>📊 10M cells</span>
-                        </div>
-                    </div>
+                    <h3>Validation Cases</h3>
+                    <p>Standard benchmark problems for code verification including Taylor bar, shock tubes, and analytical solutions.</p>
+                    <a href="#validation" class="card-link">View Examples →</a>
                 </div>
 
-                <!-- Example 4 -->
-                <div class="example-card" data-category="3d validation">
-                    <div class="example-image">
-                        <img src="placeholder-taylor.jpg" alt="Taylor bar">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+                <!-- Example Card 4 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-multimaterial.jpg" alt="Multi-material">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">3D</span>
-                            <span class="tag">Validation</span>
-                        </div>
-                        <h3>Taylor Bar Impact</h3>
-                        <p>Standard validation case for strength models and material behavior</p>
-                        <div class="example-meta">
-                            <span>⏱️ 80 μs</span>
-                            <span>📊 AMR: 3 levels</span>
-                        </div>
-                    </div>
+                    <h3>Multi-Material Flows</h3>
+                    <p>Simulations involving multiple materials with interface tracking and fluid-structure interaction.</p>
+                    <a href="#multi" class="card-link">View Examples →</a>
                 </div>
 
-                <!-- Example 5 -->
-                <div class="example-card" data-category="2d">
-                    <div class="example-image">
-                        <img src="placeholder-cavity.jpg" alt="Cavity collapse">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+                <!-- Example Card 5 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-underwater.jpg" alt="Underwater">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">2D</span>
-                            <span class="tag">Cavitation</span>
-                        </div>
-                        <h3>Bubble Collapse</h3>
-                        <p>Cavitation bubble dynamics near rigid boundary</p>
-                        <div class="example-meta">
-                            <span>⏱️ 1 ms</span>
-                            <span>📊 AMR: 6 levels</span>
-                        </div>
-                    </div>
+                    <h3>Underwater Dynamics</h3>
+                    <p>Blast wave propagation, bubble collapse, and cavitation phenomena in fluid environments.</p>
+                    <a href="#underwater" class="card-link">View Examples →</a>
                 </div>
 
-                <!-- Example 6 -->
-                <div class="example-card" data-category="3d">
-                    <div class="example-image">
-                        <img src="placeholder-jet.jpg" alt="Shaped charge">
-                        <div class="example-overlay">
-                            <button class="view-details">View Details</button>
-                        </div>
+                <!-- Example Card 6 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-impact.jpg" alt="Impact">
                     </div>
-                    <div class="example-content">
-                        <div class="example-tags">
-                            <span class="tag">3D</span>
-                            <span class="tag">Complex</span>
-                        </div>
-                        <h3>Shaped Charge Jet</h3>
-                        <p>Metal jet formation and penetration mechanics</p>
-                        <div class="example-meta">
-                            <span>⏱️ 50 μs</span>
-                            <span>📊 15M cells</span>
-                        </div>
+                    <h3>High-Velocity Impact</h3>
+                    <p>Projectile penetration, fragmentation, and material failure under extreme loading conditions.</p>
+                    <a href="#impact" class="card-link">View Examples →</a>
+                </div>
+
+                <!-- Example Card 7 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-amr.jpg" alt="AMR">
+                    </div>
+                    <h3>AMR Demonstrations</h3>
+                    <p>Examples showcasing adaptive mesh refinement capabilities and error-driven grid adaptation.</p>
+                    <a href="#amr" class="card-link">View Examples →</a>
+                </div>
+
+                <!-- Example Card 8 -->
+                <div class="example-card">
+                    <div class="card-icon">
+                        <img src="placeholder-tutorials.jpg" alt="Tutorials">
+                    </div>
+                    <h3>Tutorials</h3>
+                    <p>Step-by-step guides for beginners covering basic setup, mesh generation, and result visualization.</p>
+                    <a href="#tutorials" class="card-link">View Examples →</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about">
+                <h2>About PISALE</h2>
+                <div class="about-content">
+                    <div class="about-col">
+                        <h3>ALE Method</h3>
+                        <p>The Arbitrary Lagrangian-Eulerian framework combines the best of Lagrangian and Eulerian approaches, handling extreme deformations while maintaining numerical accuracy.</p>
+                    </div>
+                    <div class="about-col">
+                        <h3>Adaptive Refinement</h3>
+                        <p>Dynamic mesh adaptation concentrates computational resources in regions of interest, balancing solution accuracy with computational efficiency.</p>
+                    </div>
+                    <div class="about-col">
+                        <h3>High Performance</h3>
+                        <p>Optimized algorithms and parallel processing capabilities enable efficient computation of large-scale problems on modern HPC systems.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <div class="section-header">
-                <h2>Publications & References</h2>
-                <p class="section-subtitle">Scientific foundations and validation studies</p>
-            </div>
-            <div class="publications-grid">
-                <div class="publication-card">
-                    <div class="pub-type">Journal Article</div>
-                    <h3>ALE-AMR Framework for Hydrodynamic Simulations</h3>
-                    <p class="pub-authors">Author et al.</p>
-                    <p class="pub-journal">Journal of Computational Physics, 2024</p>
-                    <a href="#" class="pub-link">Read Paper →</a>
+            <!-- Documentation -->
+            <section id="documentation" class="documentation">
+                <h2>Documentation & Resources</h2>
+                <div class="doc-grid">
+                    <div class="doc-item">
+                        <h4>User Manual</h4>
+                        <p>Complete guide to code usage, input file format, and simulation setup.</p>
+                        <a href="#manual">Download PDF →</a>
+                    </div>
+                    <div class="doc-item">
+                        <h4>Publications</h4>
+                        <p>Scientific papers and validation studies documenting code capabilities.</p>
+                        <a href="#papers">View Publications →</a>
+                    </div>
+                    <div class="doc-item">
+                        <h4>GitHub Repository</h4>
+                        <p>Access source code, report issues, and contribute to development.</p>
+                        <a href="#github">Visit GitHub →</a>
+                    </div>
                 </div>
-                <div class="publication-card">
-                    <div class="pub-type">Conference</div>
-                    <h3>Adaptive Refinement Strategies for Impact Problems</h3>
-                    <p class="pub-authors">Author & Collaborator</p>
-                    <p class="pub-journal">ECCOMAS Conference, 2023</p>
-                    <a href="#" class="pub-link">View Presentation →</a>
-                </div>
-                <div class="publication-card">
-                    <div class="pub-type">Technical Report</div>
-                    <h3>Validation Suite for Multi-Material Flows</h3>
-                    <p class="pub-authors">Research Group</p>
-                    <p class="pub-journal">Technical Report TR-2024-01</p>
-                    <a href="#" class="pub-link">Download PDF →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get in Touch</h2>
-                <p class="section-subtitle">Interested in collaborations or have questions?</p>
-            </div>
-            <div class="contact-content">
+            <!-- Contact -->
+            <section id="contact" class="contact">
+                <h2>Contact</h2>
+                <p>For questions about PISALE or to request access to example files, please contact:</p>
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>your.email@institution.edu</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🏛️</div>
-                        <div>
-                            <h4>Institution</h4>
-                            <p>Your University / Research Center</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💻</div>
-                        <div>
-                            <h4>Code Repository</h4>
-                            <p><a href="#">GitHub Link</a></p>
-                        </div>
-                    </div>
+                    <p><strong>Email:</strong> your.email@institution.edu</p>
+                    <p><strong>Institution:</strong> Your University / Research Center</p>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+            </section>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo">
-                        <span class="logo-icon">◬</span>
-                        <span class="logo-text">HydroCode</span>
-                    </div>
-                    <p>Advanced ALE-AMR hydrodynamic simulations for complex fluid dynamics problems</p>
+                <div class="footer-logo">
+                    <span class="logo-icon">〰</span>
+                    <span>PISALE</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#examples">Examples</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">User Manual</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#examples">Examples</a>
+                    <a href="#documentation">Documentation</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 HydroCode. All rights reserved.</p>
+                <p>&copy; 2024 PISALE. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
