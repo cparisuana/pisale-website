@@ -4,15 +4,15 @@
 
 :root {
     /* Muted Plasma Color Palette - Original but Refined */
-    --primary: #7B5BA1;
-    --secondary: #B8576D;
-    --accent: #C97850;
+    --primary: #8B2FC9;
+    --secondary: #E94560;
+    --accent: #F97316;
     --bg-dark: #0F0A1E;
     --bg-light: #1A1428;
     --bg-card: #241938;
     --text-primary: #E8E6F0;
     --text-secondary: #A89DB8;
-    --border: rgba(123, 91, 161, 0.2);
+    --border: rgba(139, 47, 201, 0.2);
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
