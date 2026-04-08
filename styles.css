@@ -3,26 +3,26 @@
    =================================== */
 
 :root {
-    /* Deep Ocean Color Palette - Professional with Energy */
-    --primary: #1E88E5;
-    --secondary: #26A69A;
-    --accent: #42A5F5;
-    --bg-dark: #0A1929;
-    --bg-light: #132F4C;
-    --bg-card: #1A2942;
-    --text-primary: #E94560;
-    --text-secondary: #E94560;
-    --border: rgba(30, 136, 229, 0.2);
+    /* Muted Plasma Color Palette - Original but Refined */
+    --primary: #7B5BA1;
+    --secondary: #B8576D;
+    --accent: #C97850;
+    --bg-dark: #0F0A1E;
+    --bg-light: #1A1428;
+    --bg-card: #241938;
+    --text-primary: #E8E6F0;
+    --text-secondary: #A89DB8;
+    --border: rgba(123, 91, 161, 0.2);
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
     --gradient-accent: linear-gradient(135deg, var(--secondary), var(--accent));
     
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(30, 136, 229, 0.15);
-    --shadow-md: 0 4px 16px rgba(30, 136, 229, 0.2);
-    --shadow-lg: 0 8px 32px rgba(30, 136, 229, 0.25);
-    --shadow-glow: 0 0 20px rgba(30, 136, 229, 0.3);
+    --shadow-sm: 0 2px 8px rgba(123, 91, 161, 0.12);
+    --shadow-md: 0 4px 16px rgba(123, 91, 161, 0.18);
+    --shadow-lg: 0 8px 32px rgba(123, 91, 161, 0.22);
+    --shadow-glow: 0 0 20px rgba(123, 91, 161, 0.25);
     
     /* Typography */
     --font-primary: 'Inter', sans-serif;
