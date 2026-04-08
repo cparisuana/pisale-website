@@ -3,26 +3,26 @@
    =================================== */
 
 :root {
-    /* Charcoal Slate Color Palette - Professional & Muted */
-    --primary: #F97316; /*#546E7A;*/
-    --secondary: #E94560; /*#78909C;*/
-    --accent: #90A4AE;
-    --bg-dark: #1C1C1E;
-    --bg-light: #2C2C2E;
-    --bg-card: #3A3A3C;
-    --text-primary: #8B2FC9; /*#F5F5F7;*/
-    --text-secondary: #AEAEB2;
-    --border: rgba(84, 110, 122, 0.2);
+    /* Deep Ocean Color Palette - Professional with Energy */
+    --primary: #1E88E5;
+    --secondary: #26A69A;
+    --accent: #42A5F5;
+    --bg-dark: #0A1929;
+    --bg-light: #132F4C;
+    --bg-card: #1A2942;
+    --text-primary: #E3F2FD;
+    --text-secondary: #90CAF9;
+    --border: rgba(30, 136, 229, 0.2);
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
     --gradient-accent: linear-gradient(135deg, var(--secondary), var(--accent));
     
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
-    --shadow-glow: 0 0 20px rgba(84, 110, 122, 0.3);
+    --shadow-sm: 0 2px 8px rgba(30, 136, 229, 0.15);
+    --shadow-md: 0 4px 16px rgba(30, 136, 229, 0.2);
+    --shadow-lg: 0 8px 32px rgba(30, 136, 229, 0.25);
+    --shadow-glow: 0 0 20px rgba(30, 136, 229, 0.3);
     
     /* Typography */
     --font-primary: 'Inter', sans-serif;
