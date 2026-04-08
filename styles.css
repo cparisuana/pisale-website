@@ -4,8 +4,8 @@
 
 :root {
     /* Plasma Flow Color Palette */
-    --primary: #546E7A;/*#8B2FC9;*/
-    --secondary: #E94560;
+    --primary: #8B2FC9;
+    --secondary: #4A90A4; /*#E94560;*/
     --accent: #F97316;
     --bg-dark: #0F0A1E;
     --bg-light: #1A1428;
