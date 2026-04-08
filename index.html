@@ -36,6 +36,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
+            <canvas id="particleCanvas"></canvas>
+        </div>
         <div class="hero-content">
             <div class="hero-badge">Advanced Computational Fluid Dynamics</div>
             <h1 class="hero-title">
@@ -75,17 +77,17 @@
             </div>
             <div class="about-grid">
                 <div class="about-card">
-                    <div class="card-icon"></div>
+                    <div class="card-icon">⚡</div>
                     <h3>High Performance</h3>
                     <p>Optimized algorithms for efficient computation of large-scale problems with parallel processing capabilities</p>
                 </div>
                 <div class="about-card">
-                    <div class="card-icon"></div>
+                    <div class="card-icon">🎯</div>
                     <h3>Adaptive Methods</h3>
                     <p>ALE framework seamlessly transitions between Lagrangian and Eulerian descriptions for optimal accuracy</p>
                 </div>
                 <div class="about-card">
-                    <div class="card-icon"></div>
+                    <div class="card-icon">📐</div>
                     <h3>Smart Refinement</h3>
                     <p>AMR technology dynamically refines mesh where needed, balancing resolution and computational cost</p>
                 </div>
@@ -174,7 +176,7 @@
                 <!-- Example 1 -->
                 <div class="example-card" data-category="2d validation">
                     <div class="example-image">
-                        <img src="placeholder-shock.jpg" alt="Example 1">
+                        <img src="placeholder-shock.jpg" alt="Shock tube problem">
                         <div class="example-overlay">
                             <button class="view-details">View Details</button>
                         </div>
@@ -183,13 +185,20 @@
                         <div class="example-tags">
                             <span class="tag">2D</span>
                             <span class="tag">Validation</span>
+                        </div>
+                        <h3>Sod Shock Tube</h3>
+                        <p>Classic 1D Riemann problem demonstrating shock capturing capabilities</p>
+                        <div class="example-meta">
+                            <span>⏱️ 0.2 ms</span>
+                            <span>📊 AMR: 4 levels</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Example 2 -->
                 <div class="example-card" data-category="2d">
                     <div class="example-image">
-                        <img src="placeholder-blast.jpg" alt="Example 2">
+                        <img src="placeholder-blast.jpg" alt="Blast wave">
                         <div class="example-overlay">
                             <button class="view-details">View Details</button>
                         </div>
@@ -200,10 +209,10 @@
                             <span class="tag">Multi-material</span>
                         </div>
                         <h3>Underwater Explosion</h3>
-                        <p>Shock wave propagation in water with fluid-structure interaction</p>
+                        <p>Blast wave propagation in water with fluid-structure interaction</p>
                         <div class="example-meta">
-                            <span>⏱️ 5 ms (?)</span>
-                            <span>📊 AMR: 3 levels</span>
+                            <span>⏱️ 5 ms</span>
+                            <span>📊 AMR: 5 levels</span>
                         </div>
                     </div>
                 </div>
@@ -233,7 +242,7 @@
                 <!-- Example 4 -->
                 <div class="example-card" data-category="3d validation">
                     <div class="example-image">
-                        <img src="placeholder-taylor.jpg" alt="Example 4">
+                        <img src="placeholder-taylor.jpg" alt="Taylor bar">
                         <div class="example-overlay">
                             <button class="view-details">View Details</button>
                         </div>
@@ -243,7 +252,7 @@
                             <span class="tag">3D</span>
                             <span class="tag">Validation</span>
                         </div>
-                        <h3>Impact</h3>
+                        <h3>Taylor Bar Impact</h3>
                         <p>Standard validation case for strength models and material behavior</p>
                         <div class="example-meta">
                             <span>⏱️ 80 μs</span>
@@ -266,7 +275,7 @@
                             <span class="tag">Cavitation</span>
                         </div>
                         <h3>Bubble Collapse</h3>
-                        <p>Cavitation bubble dynamics</p>
+                        <p>Cavitation bubble dynamics near rigid boundary</p>
                         <div class="example-meta">
                             <span>⏱️ 1 ms</span>
                             <span>📊 AMR: 6 levels</span>
@@ -277,7 +286,7 @@
                 <!-- Example 6 -->
                 <div class="example-card" data-category="3d">
                     <div class="example-image">
-                        <img src="placeholder-jet.jpg" alt="Example 6">
+                        <img src="placeholder-jet.jpg" alt="Shaped charge">
                         <div class="example-overlay">
                             <button class="view-details">View Details</button>
                         </div>
@@ -287,8 +296,8 @@
                             <span class="tag">3D</span>
                             <span class="tag">Complex</span>
                         </div>
-                        <h3>Something</h3>
-                        <p>something</p>
+                        <h3>Shaped Charge Jet</h3>
+                        <p>Metal jet formation and penetration mechanics</p>
                         <div class="example-meta">
                             <span>⏱️ 50 μs</span>
                             <span>📊 15M cells</span>
