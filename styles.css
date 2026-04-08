@@ -5,7 +5,7 @@
 :root {
     /* Charcoal Slate Color Palette - Professional & Muted */
     --primary: #546E7A;
-    --secondary: #78909C;
+    --secondary: #E94560; /*#78909C;*/
     --accent: #90A4AE;
     --bg-dark: #1C1C1E;
     --bg-light: #2C2C2E;
